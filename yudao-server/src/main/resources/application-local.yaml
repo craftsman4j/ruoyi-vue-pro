@@ -46,13 +46,13 @@ spring:
       primary: master
       datasource:
         master:
-          url: jdbc:mysql://127.0.0.1:3306/ruoyi-vue-pro?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true # MySQL Connector/J 8.X 连接的示例
-          #          url: jdbc:mysql://127.0.0.1:3306/ruoyi-vue-pro?useSSL=true&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai # MySQL Connector/J 5.X 连接的示例
+          url: jdbc:mysql://43.142.4.174:3306/ruoyi-vue-pro?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true # MySQL Connector/J 8.X 连接的示例
+          #          url: jdbc:mysql://43.142.4.174:3306/ruoyi-vue-pro?useSSL=true&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai # MySQL Connector/J 5.X 连接的示例
           #          url: jdbc:postgresql://127.0.0.1:5432/ruoyi-vue-pro # PostgreSQL 连接的示例
           #          url: jdbc:oracle:thin:@127.0.0.1:1521:xe # Oracle 连接的示例
           #          url: jdbc:sqlserver://127.0.0.1:1433;DatabaseName=ruoyi-vue-pro;SelectMethod=cursor;encrypt=false;rewriteBatchedStatements=true;useUnicode=true;characterEncoding=utf-8 # SQLServer 连接的示例
           #          url: jdbc:dm://127.0.0.1:5236?schema=RUOYI_VUE_PRO # DM 连接的示例
-          username: root
+          username: dev
           password: 123456
         #          username: sa # SQL Server 连接的示例
         #          password: Yudao@2024 # SQL Server 连接的示例
@@ -60,14 +60,14 @@ spring:
         #          password: SYSDBA001 # DM 连接的示例
         slave: # 模拟从库，可根据自己需要修改
           lazy: true # 开启懒加载，保证启动速度
-          url: jdbc:mysql://127.0.0.1:3306/ruoyi-vue-pro?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true
-          username: root
+          url: jdbc:mysql://43.142.4.174:3306/ruoyi-vue-pro?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true
+          username: dev
           password: 123456
 
   # Redis 配置。Redisson 默认的配置足够使用，一般不需要进行调优
   data:
     redis:
-      host: 127.0.0.1 # 地址
+      host: 43.142.4.174 # 地址
       port: 6379 # 端口
       database: 0 # 数据库索引
 #    password: dev # 密码，建议生产环境开启
@@ -112,7 +112,7 @@ rocketmq:
 spring:
   # RabbitMQ 配置项，对应 RabbitProperties 配置类
   rabbitmq:
-    host: 127.0.0.1 # RabbitMQ 服务的地址
+    host: 43.142.4.174 # RabbitMQ 服务的地址
     port: 5672 # RabbitMQ 服务的端口
     username: rabbit # RabbitMQ 服务的账号
     password: rabbit # RabbitMQ 服务的密码

@@ -40,13 +40,13 @@ spring:
       primary: master
       datasource:
         master:
-          url: jdbc:mysql://127.0.0.1:3306/ruoyi-vue-pro?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true # MySQL Connector/J 8.X 连接的示例
-          username: root
+          url: jdbc:mysql://43.142.4.174:3306/ruoyi-vue-pro?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true # MySQL Connector/J 8.X 连接的示例
+          username: dev
           password: 123456
         slave: # 模拟从库，可根据自己需要修改 # 模拟从库，可根据自己需要修改
           lazy: true # 开启懒加载，保证启动速度
-          url: jdbc:mysql://127.0.0.1:3306/ruoyi-vue-pro?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true # MySQL Connector/J 8.X 连接的示例
-          username: root
+          url: jdbc:mysql://43.142.4.174:3306/ruoyi-vue-pro?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true # MySQL Connector/J 8.X 连接的示例
+          username: dev
           password: 123456
 
   # Redis 配置。Redisson 默认的配置足够使用，一般不需要进行调优
@@ -97,7 +97,7 @@ rocketmq:
 spring:
   # RabbitMQ 配置项，对应 RabbitProperties 配置类
   rabbitmq:
-    host: 127.0.0.1 # RabbitMQ 服务的地址
+    host: 43.142.4.174 # RabbitMQ 服务的地址
     port: 5672 # RabbitMQ 服务的端口
     username: guest # RabbitMQ 服务的账号
     password: guest # RabbitMQ 服务的密码
